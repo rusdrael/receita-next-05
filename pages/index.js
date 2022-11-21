@@ -27,7 +27,19 @@ async function theFetcher(url) {
 
 export function TheMovies({data,show}){
     if (!show) return (<div></div>)    
-    if (data.error) return (<div>falha na requisição</div>)
+    if (data.error) return (
+        <div>
+            <style jsx>{`
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    font-family: Arial, Verdana, sans-serif;
+                    justify-content: center;
+                }
+            `}
+            </style>
+            <Button type="text">falha na requisição</Button>
+        </div>)
     if (data.Search === '' ) 
     return (
     <div>
