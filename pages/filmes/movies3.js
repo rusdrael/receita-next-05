@@ -73,6 +73,12 @@ export function TheMovies({data,show}){
 export function TheLink({url, handler}){    
     return (
         <div>
+            <Head>
+                <meta
+                    http-equiv="Content-Security-Policy"
+                    content="upgrade-insecure-requests"
+                />
+            </Head>
             <style jsx>{`
                 div {
                     display: flex;
