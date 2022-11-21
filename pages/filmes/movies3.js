@@ -1,6 +1,7 @@
 import useSWR from 'swr'
 import {useState} from 'react'
 import {Button} from 'antd'
+import Head from 'next/head'
 
 export default function Movies3(){
     const [url, setUrl] = useState('')
